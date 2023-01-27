@@ -1,14 +1,16 @@
-import './globals.css'
+import "./globals.css";
+import { Montserrat } from "@next/font/google";
+
+const montserrat = Montserrat({
+  weights: [400, 500, 600, 700],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body className={`${montserrat.className}`}>{children}</body>
     </html>
-  )
+  );
 }
