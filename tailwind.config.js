@@ -6,7 +6,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      monserrat: ["var(--font-montserrat)"],
+    },
   },
   plugins: [],
 };
